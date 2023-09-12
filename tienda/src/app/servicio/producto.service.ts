@@ -6,7 +6,7 @@ import { Producto } from '../model/producto.model';
   providedIn: 'root',
 })
 export class ProductoService {
-  private apiUrl = 'tu_url_api'; // Reemplaza 'tu_url_api' con la URL de tu API
+  private apiUrl = 'http://localhost:4200/'; // Reemplaza 'tu_url_api' con la URL de tu API
   constructor(private http: HttpClient) {}
 
   obtenerProductos(): Observable<Producto[]> {
@@ -25,5 +25,8 @@ export class ProductoService {
 
   borrarProducto(id: number): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/productos/${id}`);
+  }
+  agregarProductoAlCarrito(producto: Producto) {
+    // Lógica para agregar el producto al carrito
   }
 }

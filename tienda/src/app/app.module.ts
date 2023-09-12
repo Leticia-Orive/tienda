@@ -6,9 +6,10 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 
 import { ProductoComponent } from './producto/producto.component';
+import { CarritoComponent } from './carrito/carrito.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, ProductoComponent],
+  declarations: [AppComponent, NavbarComponent, ProductoComponent, CarritoComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
